@@ -1,0 +1,13 @@
+.dupla {
+  border-width: 3px;
+  background-color: azure;
+  border-radius: 10px;
+  border-style: dashed;
+  border-color: #0f0;
+}
+.group {
+  background-color: aquamarine;
+}
+p {
+  cursor: default;
+}

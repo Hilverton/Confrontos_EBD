@@ -1,0 +1,15 @@
+.fundo{
+  background: #e6e6e6;
+	background-image: url('./bg.gif');/*#D2D2C1; */
+	background-repeat: no-repeat;
+	font-size: 1em;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+  min-height: 100vh;
+}
+h3{
+  color:#EACB58;
+	text-decoration: underline overline;
+}
+.trofeu{
+  width: 150px;
+}

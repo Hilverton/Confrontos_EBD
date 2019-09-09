@@ -1,0 +1,13 @@
+.areaCabecalho {
+  background: #282c34;
+  text-align: center;
+  padding: 15px;
+  padding-top: 0%;
+}
+.areaLogo {
+  width: 170px;
+}
+.areaLogo,
+.areaMenu {
+  padding: 10px;
+}
