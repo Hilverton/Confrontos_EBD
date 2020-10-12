@@ -11,7 +11,7 @@ class Confronto extends Component {
     this.state = {
       botao: false,
       confronto: [],
-      participantes: this.props.location.state.jogadores,
+      participantes: this.props.location.state.players,
       fases: 1,
       eliminados: [],
       sorteado: "",
@@ -41,7 +41,7 @@ class Confronto extends Component {
     return Math.floor(Math.random() * (max - min)) + min;
   };
 
-  sorteio = tam => {
+  sorteio = (tam) => {
     let sort,
       verif,
       valores = [];
@@ -73,7 +73,7 @@ class Confronto extends Component {
     let quinto, nomeQuinto;
     let sort = this.getRandomInt(0, tam);
     quinto = array[sort];
-    nomeQuinto = quinto.nome;
+    nomeQuinto = quinto.name;
     array.splice(sort, 1);
     this.setState({
       cinco: quinto,
@@ -95,7 +95,7 @@ class Confronto extends Component {
     if (tam >= 7 && tam % 2 !== 0) {
       let sort = this.getRandomInt(0, tam);
       proximaFase = p[sort];
-      nome = proximaFase.nome;
+      nome = proximaFase.name;
       p.splice(sort, 1);
     }
 
@@ -115,7 +115,7 @@ class Confronto extends Component {
   };
 
   limpar = (array, bool) => {
-    let ret = array.map(arr => {
+    let ret = array.map((arr) => {
       if (arr.p1.ganhou === bool) return arr.p1;
       if (arr.p2.ganhou === bool) return arr.p2;
     });
@@ -134,7 +134,7 @@ class Confronto extends Component {
     return eliminados;
   };
 
-  renumeracao = array => {
+  renumeracao = (array) => {
     for (let i = 0; i < array.length; i++) {
       array[i].id = i + 1;
       array[i].ganhou = false;
@@ -142,7 +142,7 @@ class Confronto extends Component {
     return array;
   };
 
-  altera = array => {
+  altera = (array) => {
     const { botao, fases } = this.state;
     this.setState({
       botao: !botao,
@@ -248,7 +248,7 @@ class Confronto extends Component {
               {participantes.length === 1 && (
                 <div className="text-center bg-white mb-4">
                   <img src={cup} className="trofeu mt-3" alt="troféu" />
-                  <h1 className="my-4">Ganhador: {participantes[0].nome}</h1>
+                  <h1 className="my-4">Ganhador: {participantes[0].name}</h1>
                   <div>
                     Icons made by{" "}
                     <a
@@ -280,6 +280,3 @@ class Confronto extends Component {
 }
 
 export default Confronto;
-/*
-<div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/"                 title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/"                 title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
-*/

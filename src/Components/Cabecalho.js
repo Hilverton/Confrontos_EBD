@@ -1,15 +1,16 @@
 import React from "react";
 import "./Cabecalho.css";
 import LOGO from "./../classe.png";
+import { Link } from "react-router-dom";
 
-const Cabecalho = () => {
+function Cabecalho() {
   return (
     <div className="areaCabecalho">
-      <div>
+      <Link to="/">
         <img src={LOGO} className="areaLogo" alt="logo" />
-      </div>
+      </Link>
     </div>
   );
-};
+}
 
 export default Cabecalho;

@@ -44,7 +44,7 @@ class Fase extends Component {
                   className="col-sm-3 border text-center align-items-center m-1"
                 >
                   <p className="m-0 p-2">
-                    {p.id} - {p.nome}
+                    {p.id} - {p.name}
                   </p>
                 </div>
               );
@@ -64,14 +64,14 @@ class Fase extends Component {
                         onClick={() => this.clique(d.p1.id, index)}
                         className={`mt-2 m-0 ${cor1} mx-2`}
                       >
-                        {d.p1.id} - {d.p1.nome}
+                        {d.p1.id} - {d.p1.name}
                       </p>
                       <p className="mt-2 m-0">X</p>
                       <p
                         onClick={() => this.clique(d.p2.id, index)}
                         className={`mt-2 m-0 ${cor2} mb-2 mx-2`}
                       >
-                        {d.p2.id} - {d.p2.nome}
+                        {d.p2.id} - {d.p2.name}
                       </p>
                     </div>
                   </div>
